@@ -7,14 +7,15 @@
     --someyellowlite: rgba(251, 255, 31, 0.1);
     --someblue: rgba(29, 210, 255, 1);
     --somebluelite: rgba(29, 210, 255, 0.1);
-    --spaceimage: url("../images/trappist.jpg");
+    --trappist: url("../images/trappist.jpg");
 }
 
 body {
-    background-image: var(--spaceimage);
+    background-image: var(--trappist);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 2rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
-        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Courier New', Courier, monospace;
     line-height: 1.5;
 }
 
@@ -59,7 +60,9 @@ p {
     margin: 1rem;
     font-size: 1.5rem;
 }
-
+a {
+    text-decoration: none;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -72,6 +75,16 @@ header {
     padding: 1rem;
 }
 
+h1 {
+    width: fit-content;
+    height: fit-content;
+    padding: 0 4px;
+    border: outset 2px var(--somegreen);
+    border-radius: 8px;
+    background: black;
+    margin: -24px 0;
+    box-shadow: 0 0 20px var(--somegreen);
+}
 ul {
     display: flex;
     justify-content: center;
@@ -80,16 +93,17 @@ ul {
 }
 
 li a {
-    /* justify-content: center; */
-    /* align-items: center; */
     font-size: 1rem;
     margin-bottom: 14px;
     padding: 4px;
-    text-decoration: none;
     background: var(--somebluelite);
     color: var(--somegreen);
     border: outset 2px var(--somegreen);
     border-radius: 8px;
+}
+
+li a:hover {
+    box-shadow: inset 0px 0px 4px var(--someblue), 0 0 20px var(--somepurple);
 }
 
 #AboutMe {
@@ -110,20 +124,167 @@ li a {
     box-shadow: 0 0 20px var(--somegreen);
 }
 
+#AboutMe img {
+    position: relative;
+    border-radius: 100%;
+    border: outset 4px var(--somegreen);
+    box-shadow: 0 0 20px var(--someblue);
+    width: 200px;
+    height: 200px;
+    margin: 0 40%;
+}
+#Work {
+    color: var(--somegreen);
+    border: inset 2px var(--somegreen);
+    border-radius: 8px;
+    margin: 24px;
+    background: var(--somegreenlite);
+}
+#Work h2 {
+    height: fit-content;
+    width: fit-content;
+    padding: 0 4px;
+    border: outset 2px var(--somegreen);
+    border-radius: 8px;
+    background: black;
+    margin: -20px 10px;
+    box-shadow: 0 0 20px var(--somegreen);
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
 
+.card-main {
+    display: flex;
+    flex-direction: column;
+}
 
+.card-main a h3.card-title {
+    position: relative;
+    color: var(--someblue);
+    left: 25%;
+    bottom: -50%;
+    padding-left: 1rem;
+}
+.card-main a img{
+    margin: 0 25%;
+    width: 60%;
+    border: outset 8px var(--somegreenlite);
+    border-radius: 8px;
+    opacity: 0.5;
+    
+}
+.card a h4.card-title {
+    position: relative;
+    width: fit-content;
+    left: 15%;
+    bottom: -50%;
+    color: var(--someyellow);
+}
+.card a img{
+
+    width: 480px;
+    height: 480px;
+    margin: 3rem;
+    border: outset 4px var(--somegreenlite);
+    border-radius: 100%;
+    opacity: 0.5;
+    transition: all 0.5s ease-out;
+}
+
+.card a img:hover {
+    border-radius: 8px;
+    box-shadow: 0 0 48px var(--someyellow);
+    border: outset 8px var(--somegreen);
+    opacity: 1;
+}
+
+.card-main a img:hover {
+    box-shadow: 0 0 48px var(--someblue);
+    border: outset 8px var(--somegreen);
+    opacity: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+    background: var(--somegreenlite);
+    border-radius: 8px;
+    box-shadow: 0 0 20px var(--somegreen);
+    margin: 3rem 1rem;
+    padding: 1rem;
+}
+
+#ContactMe h3 {
+    height: fit-content;
+    width: fit-content;
+    padding: 0 4px;
+    border: outset 2px var(--somegreen);
+    border-radius: 8px;
+    background: black;
+    margin: -24px 0;
+    box-shadow: 0 0 20px var(--somegreen);
+}
 @media screen and (max-width: 992px) {
     header {
         flex-direction: column;
         text-align: left;
         margin-top: 4px;
     }
+
+    #AboutMe img {
+        border-radius: 0;
+        margin: 5%;
+    }
     ul {
+        margin-top: 48px;
         flex-direction: column;
+
     }
     li {
         display: flex;
         justify-content: left;
         margin-top: -1rem;
-    };
+    }
+    
+    li a {
+        font-size: 1.5rem;
+    }
+
+    .card-main a h3.card-title {
+        font-size: 2rem;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+    }    
+    .card a h4.card-title {
+        color: var(--someblue);
+        left: 25%;
+        padding-left: 1rem;
+    }
+    .card a img{
+        margin: 2% 25%;
+        width: 60%;
+        max-height: 60%;
+        border: outset 8px var(--somegreen);
+        border-radius: 8px;
+        transition: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }
 }
+
+
+
+
+

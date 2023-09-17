@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,78 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-<body>
+
+<body alt="background image of trappist exoplanet">
     <header>
         <h1>Vincent Roco</h1>
         <ul>
             <li><a href="#AboutMe">About Me</a></li>
             <li><a href="#Work">Work</a></li>
-            <li><a href="#Contact Me">Contact Me</a></li>
-            <li><a href="Resume">Resume</a></li>
+            <li><a href="#ContactMe">Contact Me</a></li>
         </ul>
     </header>
     <main>
         <section>
-            <div id="AboutMe" class="card">
+            <div id="AboutMe">
                 <h2>About Me</h2>
-                <p>     Hello, my name is Vincent and I'm the developer of this portfolio. 
-                I am an up and coming software developer-in-training working towards web 
-                development. I've studied with other languages like C++, Java, and Python 
-                and look forward to expand my knowledge with JavaScript, HTML, and CSS.</p>
-                <p>     I've previously studied and worked with an Chemical Engineer background, working in plant facilities. 
-                My curiousity with computer technology and programming came from my field of work as the Engineer
-                tasked troubleshooting control board systems and logic. Thus, I decided to take a detour 
-                into the unknown field of computer science and explore this frontier.
+                <img alt="self portrait" src="./assets/images/selfie.JPG" />
+                <p> Hello, my name is Vincent and I'm the developer of this portfolio.
+                    I am an up and coming software developer-in-training working towards web
+                    development. I've studied with other languages like C++, Java, and Python
+                    and look forward to expand my knowledge with JavaScript, HTML, and CSS.</p>
+                <p> I've previously studied and worked with an Chemical Engineer background, working in plant
+                    facilities.
+                    My curiousity with computer technology and programming came from my field of work as the Engineer
+                    tasked troubleshooting control board systems and logic. Thus, I decided to take a detour
+                    into the unknown field of computer science and explore this frontier.
                 </p>
             </div>
-            <div id="Work" class="card">
-                
+            <div id="Work" class="works-block">
+                <h2>Work</h2>
+                <div class="row">
+                    <div class="card-main">
+                        <a href="https://fractalicecream.github.io/HorizonChallenge/">
+                            <h3 class="card-title">Horiseon Challenge</h3>
+                            <img alt="horiseon picture" src="./assets/images/horiseon.jpg" id="horiseon" />
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#cigar">
+                            <h4 class="card-title">Oumuamua</h4>
+                            <img alt="oumuamua object" src="./assets/images/cigar.png" id="cigar" />
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#redgalaxy">
+                            <h4 class="card-title">Red Galaxy</h4>
+                            <img alt="red galaxy" src="./assets/images/redgalaxy.jpg" id="redgalaxy" />
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#wasp">
+                            <h4 class="card-title">Wasp-39b</h4>
+                            <img alt="wasp exoplanet" src="./assets/images/wasp.jpg" id="wasp" />
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#uranus">
+                            <h4 class="card-title">Uranus(jwst)</h4>
+                            <img alt="jwst from uranus" src="./assets/images/uranus-jwst.png" id="uranus" />
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
+    <footer id="ContactMe">
+        <h3> Contact Me</h3>
+        <ul>
+            <li><a href="https://github.com/FractalIceCream">GitHub</a></li>
+            <li><a href="#">vincentroco@website.com</a></li>
+            <li><a href="#">555-5555</a></li>
+        </ul>
+    </footer>
 </body>
+
 </html>
