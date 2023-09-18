@@ -63,6 +63,8 @@ p {
 a {
     text-decoration: none;
 }
+
+/* header and li links */
 header {
     display: flex;
     justify-content: space-between;
@@ -106,7 +108,8 @@ li a:hover {
     box-shadow: inset 0px 0px 4px var(--someblue), 0 0 20px var(--somepurple);
 }
 
-#AboutMe {
+/* About Me section */
+.AboutMe {
     color: var(--somegreen);
     border: inset 2px var(--somegreen);
     border-radius: 8px;
@@ -114,7 +117,7 @@ li a:hover {
     background: var(--somegreenlite);
 }
 
-#AboutMe h2 {
+.AboutMe h2 {
     width: fit-content;
     padding: 0 4px;
     border: outset 2px var(--somegreen);
@@ -124,7 +127,7 @@ li a:hover {
     box-shadow: 0 0 20px var(--somegreen);
 }
 
-#AboutMe img {
+.AboutMe img {
     position: relative;
     border-radius: 100%;
     border: outset 4px var(--somegreen);
@@ -133,15 +136,18 @@ li a:hover {
     height: 200px;
     margin: 0 40%;
 }
-#Work {
+
+/* Works section */
+.Works {
     color: var(--somegreen);
     border: inset 2px var(--somegreen);
     border-radius: 8px;
     margin: 24px;
     background: var(--somegreenlite);
 }
-#Work h2 {
-    height: fit-content;
+
+.Works h2 {
+    width: fit-content;
     width: fit-content;
     padding: 0 4px;
     border: outset 2px var(--somegreen);
@@ -150,6 +156,7 @@ li a:hover {
     margin: -20px 10px;
     box-shadow: 0 0 20px var(--somegreen);
 }
+/* flex box for works section */
 .row {
     display: flex;
     flex-direction: row;
@@ -161,41 +168,42 @@ li a:hover {
 .card-main {
     display: flex;
     flex-direction: column;
+    width: 70%;
 }
 
-.card-main a h3.card-title {
+.card-main h3.card-title {
     position: relative;
     color: var(--someblue);
-    left: 25%;
     bottom: -50%;
     padding-left: 1rem;
+    width: fit-content;
 }
+
 .card-main a img{
-    margin: 0 25%;
-    width: 60%;
+    width: 100%;
     border: outset 8px var(--somegreenlite);
     border-radius: 8px;
     opacity: 0.5;
+    transition: all 0 0.1s;
     
 }
-.card a h4.card-title {
+
+.card h4.card-title {
     position: relative;
-    width: fit-content;
-    left: 15%;
+    margin: 0 15%;
     bottom: -50%;
     color: var(--someyellow);
 }
 .card a img{
-
     width: 480px;
     height: 480px;
     margin: 3rem;
     border: outset 4px var(--somegreenlite);
     border-radius: 100%;
     opacity: 0.5;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s 0.1s ease-out;
 }
-
+/* psuedo class for transition animation */
 .card a img:hover {
     border-radius: 8px;
     box-shadow: 0 0 48px var(--someyellow);
@@ -209,6 +217,7 @@ li a:hover {
     opacity: 1;
 }
 
+/* footer with Contact Me section */
 footer {
     display: flex;
     justify-content: space-between;
@@ -221,9 +230,9 @@ footer {
     padding: 1rem;
 }
 
-#ContactMe h3 {
-    height: fit-content;
+.ContactMe h3 {
     width: fit-content;
+    height: fit-content;
     padding: 0 4px;
     border: outset 2px var(--somegreen);
     border-radius: 8px;
@@ -231,6 +240,8 @@ footer {
     margin: -24px 0;
     box-shadow: 0 0 20px var(--somegreen);
 }
+
+/* media query <992px */
 @media screen and (max-width: 992px) {
     header {
         flex-direction: column;
@@ -238,10 +249,11 @@ footer {
         margin-top: 4px;
     }
 
-    #AboutMe img {
+    .AboutMe img {
         border-radius: 0;
         margin: 5%;
     }
+
     ul {
         margin-top: 48px;
         flex-direction: column;
@@ -257,22 +269,24 @@ footer {
         font-size: 1.5rem;
     }
 
-    .card-main a h3.card-title {
-        font-size: 2rem;
+    .card-main h3.card-title {
+        font-size: 1rem;
+        max-width: 700px;
+        text-wrap: wrap;
     }
     .card {
         display: flex;
         flex-direction: column;
         flex: 0 0 100%;
     }    
-    .card a h4.card-title {
+    .card h4.card-title {
+        font-size: 1rem;
         color: var(--someblue);
-        left: 25%;
         padding-left: 1rem;
     }
     .card a img{
-        margin: 2% 25%;
-        width: 60%;
+        margin: 2% 15%;
+        width: 70%;
         max-height: 60%;
         border: outset 8px var(--somegreen);
         border-radius: 8px;
@@ -280,6 +294,7 @@ footer {
     }
 
     footer {
+        font-size: 1rem;
         flex-direction: column;
     }
 }
